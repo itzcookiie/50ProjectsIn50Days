@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+}
+
+.playstation, .xbox {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    height: 100%;
+    flex: 1;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.xbox {
+    background-image: url('./xbox.jpg');
+}
+
+.playstation {
+    background-image: url('./ps5.jpg');    
+}
+
+.playstation::before, .xbox::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: rgb(119, 0, 255);
+    opacity: 0.5;
+}
+
+.xbox::before {
+    background: black;
+}
+
+.playstation,
+.xbox,
+.playstation::before, 
+.xbox::before
+{
+    transition: all 1s ease-in-out;
+}
+
+.message-container {
+    position: absolute;
+    top: 150px;
+}
+
+.message {
+    text-align: center;
+    padding: 20px;
+}
+
+.title, .btn {
+    color: white;
+    white-space: nowrap;
+}
+
+.title {
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+
+.btn {
+    padding: 20px 70px;
+    border: 2px solid white;
+    font-size: 15px;
+    background-color: transparent;
+    font-weight: bold;
+}
+
+.playstation .btn:hover, .xbox .btn:hover {
+    cursor: pointer;
+}
+
+.playstation .btn:focus, .xbox .btn:focus {
+    outline: 0;
+}
+
+.playstation .btn:hover {
+    border: 0;
+    background-color: darkblue;
+}
+
+.xbox .btn:hover {
+    border: 0;
+    background-color: green;
+}
+
+.show-console {
+    flex: 3;
+}
