@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Muli';
+    height: 100vh;
+    background-color: lightgray;
+}
+
+.title {
+    text-align: center;
+    margin: 50px;
+}
+
+.faq {
+    margin: 0 auto;
+    width: 600px;
+}
+
+.faq__block {
+    width: 100%;
+    padding: 20px;
+    margin: 20px 0;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 10px;
+    transition: background-color 0.2s;
+}
+
+.faq__block .btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.faq__answer {
+    display: none;
+    margin-top: 50px;
+}
+
+.faq__block.active .faq__answer {
+    display: block;
+}
+
+.faq__block.active {
+    background-color: white;
+}
+
+.fa-times-circle {
+    display: none;
+}
+
+.faq__block.active .fa-times-circle {
+    display: block;
+}
+
+.faq__block.active .fa-chevron-down {
+    display: none;
+}
